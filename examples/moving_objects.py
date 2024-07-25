@@ -38,22 +38,22 @@ while running:
 
     key_pressed = pygame.key.get_pressed() # pygame.key.get_pressed() returns an array of booleans with the pressed keys in the keyboard
     # if instead of elif to handle multiple key movements https://docs.python.org/3/tutorial/controlflow.html
-    if key_pressed[pygame.K_w]:
+    if key_pressed[pygame.K_w] and mov_y > 0:
         mov_y -= obj_speed
-    if key_pressed[pygame.K_s]:
+    if key_pressed[pygame.K_s] and mov_y < SCREEN_HEIGHT - OBJ_HEIGHT:
         mov_y += obj_speed
-    if key_pressed[pygame.K_a]:
+    if key_pressed[pygame.K_a] and mov_x > 0:
         mov_x -= obj_speed
-    if key_pressed[pygame.K_d]:
+    if key_pressed[pygame.K_d] and mov_x < SCREEN_WIDTH - OBJ_WIDTH:
         mov_x += obj_speed
 
-    if key_pressed[pygame.K_UP]:
+    if key_pressed[pygame.K_UP] and mov_y_circle > CIRCLE_RADIUS:
         mov_y_circle -= circle_speed
-    if key_pressed[pygame.K_DOWN]:
+    if key_pressed[pygame.K_DOWN] and mov_y_circle < SCREEN_HEIGHT - CIRCLE_RADIUS:
         mov_y_circle += circle_speed
-    if key_pressed[pygame.K_LEFT]:
+    if key_pressed[pygame.K_LEFT] and mov_x_circle > CIRCLE_RADIUS:
         mov_x_circle -= circle_speed
-    if key_pressed[pygame.K_RIGHT]:
+    if key_pressed[pygame.K_RIGHT] and mov_x_circle < SCREEN_WIDTH - CIRCLE_RADIUS:
         mov_x_circle += circle_speed
 
     pygame.draw.rect(screen, (255, 255, 255), (mov_x, mov_y, OBJ_WIDTH, OBJ_HEIGHT))
