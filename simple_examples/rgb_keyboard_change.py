@@ -1,4 +1,5 @@
 import pygame
+import time
 
 pygame.init()
 
@@ -22,14 +23,16 @@ while running:
             running = False
         
         elif event.type == pygame.KEYDOWN:
-            screen.fill((255, 0, 0))
+            if event.key == pygame.K_r:
+                screen.fill((255, 0, 0))
+            elif event.key == pygame.K_g:
+                screen.fill((0, 255, 0))
+            elif event.key == pygame.K_b:
+                screen.fill((0, 0, 255))
+            pygame.display.flip()
 
         elif event.type == pygame.KEYUP:
             screen.fill((0, 0, 0))
-
-    pygame.display.flip()
+            pygame.display.flip()
 
     clock.tick(60)
-
-    # Display FPS for debugging
-    print(f"FPS: {clock.get_fps():.2f}")
