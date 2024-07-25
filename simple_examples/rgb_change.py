@@ -11,7 +11,7 @@ clock = pygame.time.Clock()
 
 # Init the screen
 screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
-pygame.display.set_caption("Moba")
+pygame.display.set_caption("RGB Change")
 
 # Colors array
 colors = [(255, 0, 0), (0, 255, 0), (0, 0, 255)]

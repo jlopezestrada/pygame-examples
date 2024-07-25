@@ -1,5 +1,4 @@
 import pygame
-import time
 
 pygame.init()
 
@@ -12,7 +11,7 @@ clock = pygame.time.Clock()
 
 # Init the screen
 screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
-pygame.display.set_caption("Moba")
+pygame.display.set_caption("RGB Keyboard Change")
 
 # Game loop
 running = True
