@@ -8,6 +8,9 @@ SCREEN_HEIGHT = 600
 screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
 pygame.display.set_caption("Player")
 
+# Font of the game
+font = pygame.font.Font(None, 24)
+
 # Clock
 clock = pygame.time.Clock()
 
@@ -40,6 +43,19 @@ while running:
 
     # Create the player
     pygame.draw.rect(screen, (255, 0, 255), (player_x, player_y, PLAYER_WIDTH, PLAYER_HEIGHT))
+
+    # Text on the screen
+    # Health
+    screen.blit(font.render("HEALTH", True, (255, 0, 0)), (10, 10))
+
+    # XP
+    screen.blit(font.render("XP", True, (255, 0, 0)), (10, 30))
+
+    # Level
+    screen.blit(font.render("LEVEL", True, (255, 0, 0)), (SCREEN_WIDTH - 80, 10))
+
+    # Gold
+    screen.blit(font.render("GOLD", True, (255, 0, 0)), (10, SCREEN_HEIGHT - 30))
 
     pygame.display.flip()
 
