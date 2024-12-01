@@ -127,7 +127,6 @@ def main():
         health_text = font.render(f'Health: {player.health}', True, WHITE)
         WINDOW.blit(health_text, (10, 10))
 
-        # Update the display
         pygame.display.flip()
 
     pygame.quit()
